@@ -1,0 +1,27 @@
+{
+  "name": "webdriverio_introduction_task4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "wdio test:smoke": "set ENV=test&& wdio run src/configs/wdio.conf.test.cjs --suite smoke",
+    "wdio test:test": "set ENV=test&& wdio run src/configs/wdio.conf.test.cjs --suite test",
+    "wdio test:regression": "set ENV=test&& wdio run src/configs/wdio.conf.test.cjs --suite regression",
+    "wdio dev:smoke": "set ENV=dev&& wdio run src/configs/wdio.conf.dev.cjs --suite smoke",
+    "wdio dev:test": "set ENV=dev&& wdio run src/configs/wdio.conf.dev.cjs --suite test",
+    "wdio dev:regression": "set ENV=dev&& wdio run src/configs/wdio.conf.dev.cjs --suite regression",
+    "generate-allure-report": "node generateAllureReport.js"
+  },
+  "keywords": [],
+  "author": "Enrique Ku",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^8.38.0",
+    "@wdio/cli": "^8.38.1",
+    "@wdio/local-runner": "^8.38.0",
+    "@wdio/mocha-framework": "^8.38.0",
+    "@wdio/spec-reporter": "^8.38.0",
+    "allure-commandline": "^2.29.0"
+  }
+}
