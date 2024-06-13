@@ -1,9 +1,9 @@
-import {ResultsSection} from "../components/results/ResultsSection.js";
-
 export class ResultsPage {
     constructor() {
-        this.resultsSection = new ResultsSection();
     }
 
+    get desiredResult(){
+        return $(".gsc-thumbnail-inside [href=\"https://cloud.google.com/products/calculator\"]")
+    }
 
 }

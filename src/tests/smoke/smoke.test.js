@@ -25,14 +25,14 @@ describe('Google Cloud Pricing Calculator Smoke Tests', () => {
     });
 
     it('should display the desired result on the results page', async () => {
-        const desiredResultIsPresent = await pages("ResultsPage").resultsSection.desiredResult;
+        const desiredResultIsPresent = await pages("ResultsPage").desiredResult;
 
         expect(desiredResultIsPresent).toBePresent();
     });
 
 
     it('should open the pricing calculator page', async () => {
-        await pages("ResultsPage").resultsSection.desiredResult.click();
+        await pages("ResultsPage").desiredResult.click();
 
         expect(browser).toHaveTitle(smokeTestData.pricingCalculatorPageTitle);
     });
@@ -46,81 +46,81 @@ describe('Google Cloud Pricing Calculator Smoke Tests', () => {
         const computeEngineIsPresent = await pages("PricingCalculator").computeEngine;
         expect(computeEngineIsPresent).toBePresent();
 
-        await pages("PricingCalculator").addEstimate.computeEngine.click();
+        await pages("PricingCalculator").computeEngine.click();
 
-        const plusNumberOfInstancesIsPresent = await pages("PricingCalculator").computeEngine.plusNumberOfInstances;
+        const plusNumberOfInstancesIsPresent = await pages("PricingCalculator").plusNumberOfInstances;
         expect(plusNumberOfInstancesIsPresent).toBePresent();
 
-        const machineTypeIsPresent = await pages("PricingCalculator").computeEngine.machineType;
+        const machineTypeIsPresent = await pages("PricingCalculator").machineType;
         expect(machineTypeIsPresent).toBePresent();
 
-        const machineTypeOptionN1Standard8IsPresent = await pages("PricingCalculator").computeEngine.machineTypeOptionN1Standard8;
+        const machineTypeOptionN1Standard8IsPresent = await pages("PricingCalculator").machineTypeOptionN1Standard8;
         expect(machineTypeOptionN1Standard8IsPresent).toBePresent();
 
-        const addGpusButtonIsPresent = await pages("PricingCalculator").computeEngine.addGpusButton;
+        const addGpusButtonIsPresent = await pages("PricingCalculator").addGpusButton;
         expect(addGpusButtonIsPresent).toBePresent();
 
-        const gpuModelButtonIsPresent = await pages("PricingCalculator").computeEngine.gpuModelButton;
+        const gpuModelButtonIsPresent = await pages("PricingCalculator").gpuModelButton;
         expect(gpuModelButtonIsPresent).toBePresent();
 
-        const numberOfGpusButtonIsPresent = await pages("PricingCalculator").computeEngine.numberOfGpusButton;
+        const numberOfGpusButtonIsPresent = await pages("PricingCalculator").numberOfGpusButton;
         expect(numberOfGpusButtonIsPresent).toBePresent();
 
-        const localSsdButtonIsPresent = await pages("PricingCalculator").computeEngine.localSsdButton;
+        const localSsdButtonIsPresent = await pages("PricingCalculator").localSsdButton;
         expect(localSsdButtonIsPresent).toBePresent();
 
-        const regionButtonIsPresent = await pages("PricingCalculator").computeEngine.regionButton;
+        const regionButtonIsPresent = await pages("PricingCalculator").regionButton;
         expect(regionButtonIsPresent).toBePresent();
 
-        const estimatedCostIsPresent = await pages("PricingCalculator").costDetails.estimatedCost;
+        const estimatedCostIsPresent = await pages("PricingCalculator").estimatedCost;
         expect(estimatedCostIsPresent).toBePresent();
 
-        const shareButtonIsPresent = await pages("PricingCalculator").costDetails.shareButton;
+        const shareButtonIsPresent = await pages("PricingCalculator").shareButton;
         expect(shareButtonIsPresent).toBePresent();
 
         await pages("PricingCalculator").closeMessageContainer();
-        await pages("PricingCalculator").costDetails.clickShareButton();
+        await pages("PricingCalculator").clickShareButton();
 
-        const openEstimateSummaryIsPresent = await pages("PricingCalculator").shareEstimate.openEstimateSummary;
+        const openEstimateSummaryIsPresent = await pages("PricingCalculator").openEstimateSummary;
         expect(openEstimateSummaryIsPresent).toBePresent();
     });
 
     it('should open the summary page', async () => {
-        await pages("PricingCalculator").shareEstimate.openEstimateSummary.click();
+        await pages("PricingCalculator").openEstimateSummary.click();
         await pages("PricingCalculator").changeTab();
 
         expect(browser).toHaveTitle(smokeTestData.summaryPageTitle);
     });
 
     it('should display all elements on the summary page', async () => {
-        const machineTypeIsPresent = await pages("SummaryPage").costEstimateSummary.machineType;
+        const machineTypeIsPresent = await pages("SummaryPage").machineType;
         expect(machineTypeIsPresent).toBePresent();
 
-        const gpuModelIsPresent = await pages("SummaryPage").costEstimateSummary.gpuModel;
+        const gpuModelIsPresent = await pages("SummaryPage").gpuModel;
         expect(gpuModelIsPresent).toBePresent();
 
-        const numberOfGpusIsPresent = await pages("SummaryPage").costEstimateSummary.numberOfGpus;
+        const numberOfGpusIsPresent = await pages("SummaryPage").numberOfGpus;
         expect(numberOfGpusIsPresent).toBePresent();
 
-        const localSsdIsPresent = await pages("SummaryPage").costEstimateSummary.localSsd;
+        const localSsdIsPresent = await pages("SummaryPage").localSsd;
         expect(localSsdIsPresent).toBePresent();
 
-        const numberOfInstancesIsPresent = await pages("SummaryPage").costEstimateSummary.numberOfInstances;
+        const numberOfInstancesIsPresent = await pages("SummaryPage").numberOfInstances;
         expect(numberOfInstancesIsPresent).toBePresent();
 
-        const operatingSystemIsPresent = await pages("SummaryPage").costEstimateSummary.operatingSystem;
+        const operatingSystemIsPresent = await pages("SummaryPage").operatingSystem;
         expect(operatingSystemIsPresent).toBePresent();
 
-        const provisionalModelIsPresent = await pages("SummaryPage").costEstimateSummary.provisionalModel;
+        const provisionalModelIsPresent = await pages("SummaryPage").provisionalModel;
         expect(provisionalModelIsPresent).toBePresent();
 
-        const addGpusIsPresent = await pages("SummaryPage").costEstimateSummary.addGpus;
+        const addGpusIsPresent = await pages("SummaryPage").addGpus;
         expect(addGpusIsPresent).toBePresent();
 
-        const regionIsPresent = await pages("SummaryPage").costEstimateSummary.region;
+        const regionIsPresent = await pages("SummaryPage").region;
         expect(regionIsPresent).toBePresent();
 
-        const committedUseIsPresent = await pages("SummaryPage").costEstimateSummary.committedUse;
+        const committedUseIsPresent = await pages("SummaryPage").committedUse;
         expect(committedUseIsPresent).toBePresent();
     });
 

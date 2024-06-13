@@ -8,9 +8,6 @@
     "wdio test:smoke": "set ENV=test&& wdio run src/configs/wdio.conf.test.cjs --suite smoke",
     "wdio test:test": "set ENV=test&& wdio run src/configs/wdio.conf.test.cjs --suite test",
     "wdio test:regression": "set ENV=test&& wdio run src/configs/wdio.conf.test.cjs --suite regression",
-    "wdio dev:smoke": "set ENV=dev&& wdio run src/configs/wdio.conf.dev.cjs --suite smoke",
-    "wdio dev:test": "set ENV=dev&& wdio run src/configs/wdio.conf.dev.cjs --suite test",
-    "wdio dev:regression": "set ENV=dev&& wdio run src/configs/wdio.conf.dev.cjs --suite regression",
     "generate-allure-report": "node generateAllureReport.js"
   },
   "keywords": [],
