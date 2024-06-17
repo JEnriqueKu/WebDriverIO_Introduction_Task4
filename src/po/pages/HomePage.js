@@ -8,6 +8,10 @@ export class HomePage {
         this.header = new Header();
     }
 
+    get pageTitle(){
+        return "Cloud Computing Services | Google Cloud";
+    }
+
     open(){
         return openPage(this.url);
     }

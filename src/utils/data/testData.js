@@ -1,6 +1,6 @@
 const testData = {
 "searchQuery": "Google Cloud Platform Pricing Calculator",
-    "instances": 4,
+    "instances": 10,
     "machineType": "n1-standard-8",
     "gpuModel": "NVIDIA V100",
     "numberOfGpus": 1,
@@ -17,7 +17,7 @@ const testData = {
         "gpuModel": "NVIDIA V100",
         "numberOfGpus": "1",
         "localSsd": "2x375 GB",
-        "numberOfInstances": "4",
+        "numberOfInstances": "10",
         "operatingSystem": "Free: Debian, CentOS, CoreOS, Ubuntu or BYOL (Bring Your Own License)",
         "provisionalModel": "Regular",
         "addGpus": "true",

@@ -5,14 +5,18 @@ export class PricingCalculatorPage {
     constructor() {
     }
 
+    get pageTitle(){
+        return "Google Cloud Pricing Calculator";
+    }
+
     // selectors
 
     get addEstimateButton(){
-        return $("span.UywwFc-vQzf8d")
+        return $("span.UywwFc-vQzf8d");
     }
 
     get computeEngine(){
-        return $("//h2[text()='Compute Engine']")
+        return $("//h2[text()='Compute Engine']");
     }
 
     get plusNumberOfInstances(){
@@ -24,27 +28,27 @@ export class PricingCalculatorPage {
     }
 
     get machineTypeOptionN1Standard8(){
-        return $("li.MCs1Pd[data-value=\"n1-standard-8\"]")
+        return $("li.MCs1Pd[data-value=\"n1-standard-8\"]");
     }
 
     get addGpusButton(){
-        return $("button[aria-label=\"Add GPUs\"]")
+        return $("button[aria-label=\"Add GPUs\"]");
     }
 
     get gpuModelButton(){
-        return $("div[data-field-type=\"158\"]")
+        return $("div[data-field-type=\"158\"]");
     }
 
     get numberOfGpusButton(){
-        return $("div[data-field-type=\"174\"]")
+        return $("div[data-field-type=\"174\"]");
     }
 
     get localSsdButton(){
-        return $("div[data-field-type=\"180\"]")
+        return $("div[data-field-type=\"180\"]");
     }
 
     get regionButton(){
-        return $("div[data-field-type=\"115\"]")
+        return $("div[data-field-type=\"115\"]");
     }
 
     get estimatedCost(){

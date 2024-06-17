@@ -3,6 +3,10 @@ export class SummaryPage {
     constructor() {
     }
 
+    get pageTitle(){
+        return "Google Cloud Estimate Summary";
+    }
+
     // selectors
 
     get machineType() {

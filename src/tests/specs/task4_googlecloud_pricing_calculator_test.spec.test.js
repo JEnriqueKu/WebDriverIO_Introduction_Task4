@@ -25,7 +25,7 @@ describe('Google Cloud Pricing Calculator functionality Tests', () => {
         await pages("PricingCalculator").selectLocalSSD2x375GB();
         await pages("PricingCalculator").selectRegionNetherlands();
         await pages("PricingCalculator").selectCommittedUsage(testData.committedUse);
-    })
+    });
 
     it('should create an estimate with specified configurations and validate the price is calculated in the right section of the calculator', async () => {
         //get values

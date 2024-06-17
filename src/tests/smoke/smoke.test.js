@@ -1,5 +1,4 @@
 import {pages} from "../../po/index.js";
-import {smokeTestData} from "../../utils/data/smokeTestData.js";
 
 describe('Google Cloud Pricing Calculator Smoke Tests', () => {
 
@@ -7,7 +6,7 @@ describe('Google Cloud Pricing Calculator Smoke Tests', () => {
         await pages("HomePage").open();
         await browser.maximizeWindow();
 
-        expect(browser).toHaveTitle(smokeTestData.homePageTitle);
+        expect(browser).toHaveTitle(pages("HomePage").pageTitle);
     });
 
     it('should display the search field and search button on the home page', async () => {
@@ -19,9 +18,9 @@ describe('Google Cloud Pricing Calculator Smoke Tests', () => {
     });
 
     it('should open the result page', async () => {
-        await pages("HomePage").header.searchInSearchField(smokeTestData.searchQuery);
+        await pages("HomePage").header.searchInSearchField("Google Cloud Platform Pricing Calculator");
 
-        expect(browser).toHaveTitle(smokeTestData.resultsPageTitle);
+        expect(browser).toHaveTitle(pages("ResultsPage").pageTitle);
     });
 
     it('should display the desired result on the results page', async () => {
@@ -34,7 +33,7 @@ describe('Google Cloud Pricing Calculator Smoke Tests', () => {
     it('should open the pricing calculator page', async () => {
         await pages("ResultsPage").desiredResult.click();
 
-        expect(browser).toHaveTitle(smokeTestData.pricingCalculatorPageTitle);
+        expect(browser).toHaveTitle(pages("PricingCalculator").pageTitle);
     });
 
     it('should display all elements on the pricing calculator page', async () => {
@@ -89,7 +88,7 @@ describe('Google Cloud Pricing Calculator Smoke Tests', () => {
         await pages("PricingCalculator").openEstimateSummary.click();
         await pages("PricingCalculator").changeTab();
 
-        expect(browser).toHaveTitle(smokeTestData.summaryPageTitle);
+        expect(browser).toHaveTitle(pages("SummaryPage").pageTitle);
     });
 
     it('should display all elements on the summary page', async () => {

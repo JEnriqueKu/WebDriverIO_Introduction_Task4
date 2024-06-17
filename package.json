@@ -6,9 +6,10 @@
   "type": "module",
   "scripts": {
     "wdio test:smoke": "set ENV=test&& wdio run src/configs/wdio.conf.test.cjs --suite smoke",
-    "wdio test:test": "set ENV=test&& wdio run src/configs/wdio.conf.test.cjs --suite test",
     "wdio test:regression": "set ENV=test&& wdio run src/configs/wdio.conf.test.cjs --suite regression",
-    "generate-allure-report": "node generateAllureReport.js"
+    "wdio dev:smoke": "set ENV=dev&& wdio run src/configs/wdio.conf.test.cjs --suite smoke",
+    "wdio dev:regression": "set ENV=dev&& wdio run src/configs/wdio.conf.test.cjs --suite regression",
+    "generate-allure-report": "npx allure serve allure-results"
   },
   "keywords": [],
   "author": "Enrique Ku",

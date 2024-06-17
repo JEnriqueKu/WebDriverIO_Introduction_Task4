@@ -297,7 +297,7 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    onComplete: function(exitCode, config, capabilities, results) {
+    onComplete: async function(exitCode, config, capabilities, results) {
         const reportError = new Error('Could not generate Allure report');
         const generation = allure(['generate', 'allure-results', '--clean']);
 
